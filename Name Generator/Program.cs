@@ -1,12 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Name_Generator
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            List<string> array1 = new List<string>();
+            Console.WriteLine("Number of Names?");
+            int numName = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Name Prefix?");
+            string namePrefix = Console.ReadLine();
+
+            outputName(numName, namePrefix);
+
+            void outputName(int number, string prefix)
+            {
+                for (int i = 1; i < number + 1; i++)
+                {
+                    array1.Add(namePrefix + " " + i.ToString());
+                };
+
+            }
         }
     }
 }
