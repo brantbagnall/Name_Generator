@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Name_Generator
 {
@@ -21,7 +22,13 @@ namespace Name_Generator
                 {
                     array1.Add(namePrefix + " " + i.ToString());
                 };
-
+                using (StreamWriter stream = File.AppendText("./Results.txt"))
+                {
+                    foreach (string e in array1)
+                    {
+                        stream.WriteLine(e);
+                    }
+                }
             }
         }
     }
