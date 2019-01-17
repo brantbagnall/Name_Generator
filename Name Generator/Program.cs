@@ -20,8 +20,11 @@ namespace Name_Generator
             {
                 for (int i = 1; i < number + 1; i++)
                 {
-                    array1.Add(namePrefix + " " + i.ToString());
+                    array1.Add(namePrefix + "_" + i.ToString());
                 };
+
+                File.Delete("./Results.txt");
+
                 using (StreamWriter stream = File.AppendText("./Results.txt"))
                 {
                     foreach (string e in array1)
