@@ -31,6 +31,7 @@ namespace Name_Generator
                     {
                         stream.WriteLine(e);
                     }
+                    stream.Close();
                 }
             }
         }
