@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 
 namespace Name_Generator
@@ -33,6 +34,7 @@ namespace Name_Generator
                     }
                     stream.Close();
                 }
+                Process.Start(@".\\Results.txt");
             }
         }
     }
