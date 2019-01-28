@@ -13,7 +13,7 @@ namespace Name_Generator
             Console.WriteLine("Number of Names?");
             int numName = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Name Prefix?");
-            string namePrefix = Console.ReadLine();
+            string namePrefix = Console.ReadLine().Replace(" ", "_");
 
             outputName(numName, namePrefix);
 
