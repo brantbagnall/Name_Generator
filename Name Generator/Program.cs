@@ -10,12 +10,26 @@ namespace Name_Generator
         static void Main()
         {
             List<string> array1 = new List<string>();
-            Console.WriteLine("Number of Names?");
-            int numName = Convert.ToInt32(Console.ReadLine());
+            int numName = 0;
+            numberOfOutputs();
             Console.WriteLine("Name Prefix?");
             string namePrefix = Console.ReadLine().Replace(" ", "_");
 
             outputName(numName, namePrefix);
+
+            void numberOfOutputs()
+            {
+                try
+                {
+                    Console.WriteLine("Number of Names?");
+                    numName = Convert.ToInt32(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("Please use numbers only.");
+                    numberOfOutputs();
+                }
+            }
 
             void outputName(int number, string prefix)
             {
